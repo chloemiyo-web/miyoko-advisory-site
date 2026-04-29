@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bone: #F7F4EE;
+  --ink: #0E0E0E;
+  --sumi: #1F1B16;
+  --gold: #9E8654;
+  --mist: #E8E2D7;
+}
+
+html,
+body {
+  background-color: var(--bone);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body), "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Display type */
+.font-display {
+  font-family: var(--font-display), "Fraunces", Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--ink);
+  color: var(--bone);
+}
+
+/* Smooth in-page link motion */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-up on scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reset focus rings to be quiet but accessible */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ink);
+  color: var(--bone);
+  padding: 14px 28px;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  border: 1.5px solid var(--ink);
+  border-radius: 2px;
+  transition: opacity 100ms ease-out;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--ink);
+  padding: 14px 28px;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  border: 1.5px solid var(--ink);
+  border-radius: 2px;
+  transition: opacity 100ms ease-out;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+.btn-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ink);
+  color: var(--bone);
+  padding: 9px 18px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  border-radius: 2px;
+  transition: opacity 100ms ease-out;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-nav:hover {
+  opacity: 0.9;
+}
+
+/* Inline links inside body copy */
+.prose-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: opacity 100ms ease-out;
+}
+
+.prose-link:hover {
+  opacity: 0.85;
+}
+
+/* Section dividers */
+.divider {
+  height: 1px;
+  background-color: var(--mist);
+  width: 100%;
+}
+
+/* Card */
+.card {
+  border: 1px solid var(--mist);
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+/* Form input bottom-border style */
+.field-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid var(--ink);
+  border-radius: 0;
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--ink);
+  outline: none;
+  font-family: inherit;
+}
+
+.field-input:focus {
+  border-bottom-color: var(--gold);
+}
+
+.field-textarea {
+  width: 100%;
+  background: transparent;
+  border: 1.5px solid var(--ink);
+  border-radius: 2px;
+  padding: 12px;
+  font-size: 16px;
+  color: var(--ink);
+  outline: none;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.field-textarea:focus {
+  border-color: var(--gold);
+}
+
+.field-label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Mobile menu */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bone);
+  z-index: 50;
+}
