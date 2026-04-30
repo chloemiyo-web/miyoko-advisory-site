@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Section from "@/components/Section";
+import Section from "../components/Section";
 
 export const metadata = {
   title: "Page not found",

@@ -1,8 +1,8 @@
 import "./globals.css";
 import { Fraunces, Inter } from "next/font/google";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
-import FadeUp from "@/components/FadeUp";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import FadeUp from "../components/FadeUp";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
