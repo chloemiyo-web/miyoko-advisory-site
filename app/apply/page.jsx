@@ -1,5 +1,5 @@
-import Section from "@/components/Section";
-import ApplyForm from "@/components/ApplyForm";
+import Section from "../../components/Section";
+import ApplyForm from "../../components/ApplyForm";
 
 export const metadata = {
   title: "Apply",
